@@ -9,7 +9,8 @@
 </head>
 <body>
   <?php
-  initial();
+  db_connect();
+  db_close();
   ?>
 </body>
 </html>
