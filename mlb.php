@@ -10,7 +10,18 @@
 <body>
   <?php
   db_connect();
-  db_close();
+  $sql = "SELECT mlb_name, mlb_pos, bats FROM player_info";
+  $result = mysqli_query($GLOBALS['DBLink'], $sql);
+
+  if (mysqli_num_rows($result) > 0){
+    while ($row = mysqli_fetch_assoc($result)){
+      echo "name: " . $row['mlb_name'] . " - Position: " . $row['mlb_pos'] . " Bats: " . $row['bats'] . "<br />";
+    }
+  } else {
+    echo "0 results";
+  }
+
+  db_close($GLOBALS['DBLink']);
   ?>
 </body>
 </html>
