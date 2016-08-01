@@ -4,9 +4,12 @@
     if (! $conn){
       die ("Could Not Connect:" . mysql_error());
     }
+    $GLOBALS['DBLink'] = $conn;
     echo 'it worked!';
   }
+
+
   function db_close(){
-    mysqli_close($conn);
+    mysqli_close($GLOBALS['DBLink']);
   }
 ?>
