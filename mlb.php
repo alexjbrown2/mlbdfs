@@ -10,7 +10,7 @@
   <script>
   $(function(){
     $(function get_info(){
-      $.ajax{
+      $.ajax({
         method:'POST',
         url:'includes/getinfo/infobyposition.php',
         data: {position='3B'},
@@ -20,7 +20,7 @@
          var json = $.parseJSON(data);
          console.log(json);
         }
-      }
+      })
     })
   }
 
