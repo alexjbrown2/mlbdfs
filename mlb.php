@@ -14,7 +14,7 @@
       $.ajax({
         method:'POST',
         url:'/mlbdfs/includes/getinfo/infobyposition.php',
-        data: {'position':'3B'},
+        data: {position:'3B'},
 
         dataType: 'text',
         success:function(data){
