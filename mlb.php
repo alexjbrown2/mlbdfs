@@ -18,7 +18,7 @@
 
         dataType: 'text',
         success:function(data){
-         var json = $.parseJSON(data);
+         //var json = $.parseJSON(data);
          console.log(json);
         }
       })
