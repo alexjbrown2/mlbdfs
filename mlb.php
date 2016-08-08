@@ -13,7 +13,7 @@
     $(function get_info(){
       $.ajax({
         method:'POST',
-        url:'/includes/getinfo/infobyposition.php',
+        url:'/mlbdfs/includes/getinfo/infobyposition.php',
         data: {'position':'3B'},
 
         dataType: 'text',
