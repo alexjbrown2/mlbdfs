@@ -6,14 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MLB Players</title>
+  <link rel='stylesheet' href='css/style.css' />
   <script>
   $(function(){
     $(function get_info(){
       $.ajax{
         method:'POST',
+        url:'includes/getinfo/infobyposition.php',
         data: {position='3B'},
+
         dataType: 'text',
-        success:$
+        success:function(data){
+         var json = $.parseJSON(data);
+         console.log(json);
+        }
       }
     })
   }

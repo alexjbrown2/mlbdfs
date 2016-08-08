@@ -5,7 +5,7 @@
       die ("Could Not Connect:" . mysql_error());
     }
     $GLOBALS['DBLink'] = $conn;
-    echo 'it worked!';
+
   }
 
 
