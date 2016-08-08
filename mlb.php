@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include('includes/db_functions.php'); ?>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -30,14 +30,8 @@
 
 </head>
 <body>
-  <?php
-  db_connect();
-?>
 <div class='container'>
   <div class='resultBox'></div>
 </div>
-<?php
-  db_close($GLOBALS['DBLink']);
-  ?>
 </body>
 </html>

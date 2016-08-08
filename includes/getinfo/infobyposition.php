@@ -1,5 +1,5 @@
 <?php
-include('includes/db_functions.php');
+include('/mlbdfs/includes/db_functions.php');
 
 // Connect to the Database
 db_connect();
