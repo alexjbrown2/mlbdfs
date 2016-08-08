@@ -117,10 +117,10 @@ while ($row = row_fetch_assoc($all_result)){
   'statOBP'  => $statOBP,
   'statSLG'  => $statSLG,
   'statWOBA'  => $statWOBA,
-  'statWAR'  => $statWAR,
+  'statWAR'  => $statWAR
   );
 }
-array_push($results, $tempArray)
+array_push($results, $tempArray);
 //Form json-response
 echo json_encode($results);
 ?>
