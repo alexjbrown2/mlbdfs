@@ -6,21 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MLB Players</title>
+  <script>
+  $(function(){
+    $(function get_info(){
+      $.ajax{
+        method:'POST',
+        data: {position='3B'},
+        dataType: 'text',
+        success:$
+      }
+    })
+  }
+
+  )
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
   <?php
   db_connect();
-  $sql = "SELECT mlb_name, mlb_pos, bats FROM player_info";
-  $result = mysqli_query($GLOBALS['DBLink'], $sql);
-
-  if (mysqli_num_rows($result) > 0){
-    while ($row = mysqli_fetch_assoc($result)){
-      echo "name: " . $row['mlb_name'] . " - Position: " . $row['mlb_pos'] . " Bats: " . $row['bats'] . "<br />";
-    }
-  } else {
-    echo "0 results";
-  }
-
+?>
+<div class='container'>
+  <div class='resultBox'></div>
+</div>
+<?php
   db_close($GLOBALS['DBLink']);
   ?>
 </body>
