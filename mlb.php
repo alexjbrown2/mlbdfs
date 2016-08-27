@@ -19,6 +19,7 @@
         success:function(data){
          var json = $.parseJSON(data);
          console.log(json);
+         $('.result-box').html('');
          for(a=0;a<=json.data.length;a++){
            $('.result-box').append(json.data[a].playerName);
          }
