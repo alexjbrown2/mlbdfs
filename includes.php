@@ -5,7 +5,7 @@
       //ini_set('display_startup_errors',1);
       //error_reporting(-1);
 
-	require_once("../includes/config.php");
+	require_once("includes/config.php");
 	include("includes/db_functions.php");
 
 
