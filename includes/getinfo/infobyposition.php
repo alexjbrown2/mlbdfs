@@ -93,6 +93,7 @@ $statWRCPlus = null;
 $statWAR = null;
 
 $res = db_query($sql);
+echo $sql;
 if(!$res) echo $position;
 
 while ($row = row_fetch_assoc($res)){
