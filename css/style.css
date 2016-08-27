@@ -12,6 +12,14 @@ li{
   list-style:none;
 
 }
+li a{
+  cursor: pointer;
+  transition: all .3s linear;
+
+}
+li a:hover{
+  color:#ddd;
+}
 .result-box{
 display: flex;
 flex-direction: column;
@@ -21,5 +29,4 @@ padding: 40px;
 text-align: left;
 width: auto;
 background:#fff;
-
 }
