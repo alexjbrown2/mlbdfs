@@ -34,7 +34,7 @@
 </head>
 <body>
 <div class='container'>
-  <select type="select" id="position" class="position-select" onchange='get_info("3B")'>
+  <select type="select" id="position" class="position-select" onchange='get_info(this.value)'>
     <option value="C">Catcher</option>
     <option value="1B">First Base</option>
     <option value="2B">Second Base</option>
