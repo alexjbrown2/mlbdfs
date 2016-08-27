@@ -18,7 +18,7 @@
         dataType: 'text',
         success:function(data){
          var json = $.parseJSON(data);
-         echo(json);
+         console.log(json);
          for(a=0;a<=json.data.length;a++){
            $('.result-box').append(json[a].data.playerName);
          }
