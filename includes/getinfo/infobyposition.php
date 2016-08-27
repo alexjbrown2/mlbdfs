@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER . '/mlbdfs/includes.php');
+require_once($_SERVER['HTTP_HOST'] . '/mlbdfs/includes.php');
 
 // Connect to the Database
 db_connect();
