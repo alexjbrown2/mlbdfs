@@ -119,8 +119,9 @@ while ($row = row_fetch_assoc($res)){
   'statWOBA'  => $statWOBA,
   'statWAR'  => $statWAR
   );
+  array_push($results, $tempArray);
 }
-array_push($results, $tempArray);
+
 //Form json-response
 echo json_encode($results);
 ?>
