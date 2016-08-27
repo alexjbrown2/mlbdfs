@@ -75,7 +75,7 @@ $statWOBA = null;
 $statWRCPlus = null;
 $statWAR = null;
 
-$all_result = mysqli_query($all_query);
+$all_result = mysqli_query($conn, $all_query);
 if(!$all_result) return_error_message('nope. didnt work');
 
 while ($row = row_fetch_assoc($all_result)){
