@@ -21,7 +21,9 @@
          console.log(json);
          $('.result-box').html('');
          for(a=0;a<=json.data.length;a++){
-           $('.result-box').append(json.data[a].playerName);
+           var namelink = $('<li><a class="name'+a+' ">'+json.data[a].playerName+'</a></li>');
+
+           $('.result-box').append(namelink);
          }
         }
       })
