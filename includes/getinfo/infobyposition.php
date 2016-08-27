@@ -8,19 +8,19 @@ $position = "'" . $_POST['position'] . "'";
 
 $concat_string = '';
 
-if ($position == '1B'){
+if ($position === '1B'){
   $concat_string = 'info.mlb_pos = "1B"';
 }
-if ($position == '2B'){
+if ($position === '2B'){
   $concat_string = 'info.mlb_pos = "2B"';
 }
-if ($position == 'SS'){
+if ($position === 'SS'){
   $concat_string = 'info.mlb_pos = "SS"';
 }
-if ($position == '3B'){
+if ($position === '3B'){
   $concat_string = 'info.mlb_pos = "3B"';
 }
-if ($position == 'OF'){
+if ($position === 'OF'){
   $concat_string = 'info.mlb_pos = "LF" OR info.mlb_pos = "CF" OR info.mlb_pos = "RF" OR info.mlb_pos = "OF"';
 
 }
@@ -67,7 +67,7 @@ $sql = "SELECT info.mlb_name, info.mlb_pos, info.throws, info.mlb_team, info.mlb
               FROM player_info info
               LEFT JOIN two_week stat
               ON info.fg_id = stat.playerid
-              WHERE '" . $concat_string . "'
+              WHERE . $concat_string . 
               ";
 //Global variables for results
 $results = array();
