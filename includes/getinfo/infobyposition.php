@@ -2,7 +2,7 @@
  require_once $_SERVER['DOCUMENT_ROOT'] . "/mlbdfs/includes.php";
 
 // Connect to the Database
-$conn = db_connect();
+db_connect();
 
 $position = "'" . $_POST['position'] . "'";
 
@@ -75,10 +75,10 @@ $statWOBA = null;
 $statWRCPlus = null;
 $statWAR = null;
 
-$res = mysqli_query($conn, $sql);
+$res = db_query($sql);
 if(!$res) echo $position;
 
-while ($row = mysqli_fetch_assoc($res)){
+while ($row = row_fetch_assoc($res)){
   $playerName = $row['mlb_name'];
   $playerPos = $row['mlb_pos'];
   $playerThrows = $row['throws'];

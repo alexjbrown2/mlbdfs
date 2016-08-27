@@ -13,5 +13,29 @@
     mysqli_close($GLOBALS['DBLink']);
   }
 
+  function db_query($Query){
 
+
+		if(function_exists('mysqli_connect')){
+			$Result = mysqli_query($GLOBALS['DBLink'], $Query);
+		}else{
+			$Result = mysql_query($Query, $GLOBALS['DBLink']);
+		}
+
+		if(!$Result){
+      echo 'Failed.';
+		} else {
+			return $Result;
+		}
+	}
+
+  function row_fetch_assoc($Result){
+  if(function_exists('mysqli_connect')){
+    $FetchRow = mysqli_fetch_assoc($Result);
+  }else{
+    $FetchRow = mysql_fetch_assoc($Result);
+  }
+
+  return $FetchRow;
+}
 ?>
