@@ -8,7 +8,7 @@
   <link rel='stylesheet' href='css/style.css' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
-  
+
     function get_info(pos){
       $.ajax({
         method:'POST',
@@ -32,7 +32,7 @@
 </head>
 <body>
 <div class='container'>
-  <select type="select" id="position" class="position-select" onchange='get_info($(this).value)'>
+  <select type="select" id="position" class="position-select" onchange='get_info(this.value)'>
     <option value="C">Catcher</option>
     <option value="1B">First Base</option>
     <option value="2B">Second Base</option>

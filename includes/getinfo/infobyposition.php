@@ -4,7 +4,7 @@
 // Connect to the Database
 db_connect();
 
-$position = "'" . $_POST['position'] . "'";
+$position = $_POST['position'];
 
 $concat_string = null;
 
