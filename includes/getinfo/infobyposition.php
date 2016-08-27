@@ -1,5 +1,5 @@
 <?php
-require_once('../../../includes.php');
+ require_once $_SERVER[‘DOCUMENT_ROOT’] . "includes.php";
 
 // Connect to the Database
 db_connect();
