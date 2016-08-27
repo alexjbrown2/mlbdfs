@@ -20,7 +20,7 @@
          var json = $.parseJSON(data);
          console.log(json);
          for(a=0;a<=json.data.length;a++){
-           $('.result-box').append(json[a].data.playerName);
+           $('.result-box').append(json.data[a].playerName);
          }
         }
       })
