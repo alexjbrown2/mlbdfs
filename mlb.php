@@ -17,14 +17,13 @@
 
         dataType: 'text',
         success:function(data){
-          console.log(pos);
          var json = $.parseJSON(data);
          console.log(json);
-         $('.result-box').html('');
+         //$('.result-box').html('');
 
-         for(a=0;a<=json.data.length;a++){
-           $('.result-box').append(json[a].data.playerName);
-         }
+         //for(a=0;a<=json.data.length;a++){
+        //   $('.result-box').append(json[a].data.playerName);
+        // }
         }
       })
     }
