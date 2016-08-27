@@ -4,7 +4,7 @@
 // Connect to the Database
 $conn = db_connect();
 
-$position = $_POST['position'];
+$position = "'" . $_POST['position'] . "'";
 
 /*$info_query = "SELECT pi.mlb_name, pi.mlb_pos, pi.bats FROM player_info pi WHERE pi.mlb_pos = $position";
 
@@ -76,6 +76,7 @@ $statWRCPlus = null;
 $statWAR = null;
 
 $res = mysqli_query($conn, $sql);
+if(!$res) echo $position;
 
 while ($row = mysqli_fetch_assoc($res)){
   $playerName = $row['mlb_name'];
