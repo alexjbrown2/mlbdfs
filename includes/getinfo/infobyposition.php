@@ -6,6 +6,24 @@ db_connect();
 
 $position = "'" . $_POST['position'] . "'";
 
+$concat_string = '';
+
+if ($position == '1B'){
+  $concat_string = 'WHERE info.mlb_pos = "1B"';
+}
+if ($position == '2B'){
+  $concat_string = 'WHERE info.mlb_pos = "2B"';
+}
+if ($position == 'SS'){
+  $concat_string = 'WHERE info.mlb_pos = "SS"';
+}
+if ($position == '3B'){
+  $concat_string = 'WHERE info.mlb_pos = "3B"';
+}
+if ($position == 'OF'){
+  $concat_string = 'WHERE info.mlb_pos = "LF" OR WHERE info.mlb_pos = "CF" OR WHERE info.mlb_pos = "RF" OR WHERE info.mlb_pos = "OF"';
+
+}
 /*$info_query = "SELECT pi.mlb_name, pi.mlb_pos, pi.bats FROM player_info pi WHERE pi.mlb_pos = $position";
 
 $playerName = null;
@@ -48,8 +66,7 @@ while ($row = row_fetch_assoc($stat_result)){
 $sql = "SELECT info.mlb_name, info.mlb_pos, info.throws, info.mlb_team, info.mlb_team_long, info.fg_name, stat.playerid, stat.G, stat.PA, stat.HR, stat.R, stat.RBI, stat.SB, stat.ISO, stat.BABIP, stat.AVG, stat.wOBA, stat.OBP, stat.SLG, stat.WAR
               FROM player_info info
               LEFT JOIN two_week stat
-              ON info.fg_id = stat.playerid
-              WHERE info.mlb_pos='3B'";
+              ON info.fg_id = stat.playerid" . $concat_string;
 //Global variables for results
 $results = array();
 $playerName =null;
