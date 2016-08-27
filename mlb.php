@@ -35,6 +35,7 @@
 <body>
 <div class='container'>
   <select type="select" id="position" class="position-select" onchange='get_info(this.value)'>
+    <option label="Select.." disabled="true">Select..</option>
     <option value="C">Catcher</option>
     <option value="1B">First Base</option>
     <option value="2B">Second Base</option>
