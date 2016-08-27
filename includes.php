@@ -5,8 +5,8 @@
       //ini_set('display_startup_errors',1);
       //error_reporting(-1);
 
-	include(PATH_SERVER . "/mlbdfs/includes/config.php");
-	include(PATH_INCLUDE . "/db_functions.php");
+	include("/mlbdfs/includes/config.php");
+	include("mlbdfs/includes/db_functions.php");
 
 
 ?>
