@@ -4,7 +4,7 @@
 // Connect to the Database
 db_connect();
 
-$position = $_POST['position'];
+$position = "'" . $_POST['position'] . "'";
 
 $concat_string = null;
 
@@ -95,6 +95,7 @@ $statWRCPlus = null;
 $statWAR = null;
 
 $res = db_query($sql);
+echo $sql;
 if(!$res) echo $position;
 
 while ($row = row_fetch_assoc($res)){
@@ -141,9 +142,9 @@ while ($row = row_fetch_assoc($res)){
   array_push($results, $tempArray);
 }
 $responseArray = array(
-  'success' => 'true',
   'data' => $results
 );
+
 //Form json-response
-echo json_encode($results);
+echo json_encode($responseArray);
 ?>
