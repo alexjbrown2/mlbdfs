@@ -4,9 +4,9 @@
 // Connect to the Database
 db_connect();
 
-$position = "'" . $_POST['position'] . "'";
+$position = $_POST['position'];
 
-$concat_string = null;
+$concat_string = '';
 
 if ($position === '1B'){
   $concat_string = 'info.mlb_pos = "1B"';
