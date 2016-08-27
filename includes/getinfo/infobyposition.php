@@ -141,6 +141,7 @@ while ($row = row_fetch_assoc($res)){
   array_push($results, $tempArray);
 }
 $responseArray = array(
+  'success' => 'true',
   'data' => $results
 );
 //Form json-response
