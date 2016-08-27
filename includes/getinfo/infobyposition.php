@@ -142,7 +142,7 @@ while ($row = row_fetch_assoc($res)){
   array_push($results, $tempArray);
 }
 $responseArray = array(
-/ 'data' => $results
+ 'data' => $results
 );
 
 //Form json-response
