@@ -145,5 +145,5 @@ $responseArray = array(
 );
 
 //Form json-response
-echo json_encode($responseArray);
+echo json_encode($results);
 ?>

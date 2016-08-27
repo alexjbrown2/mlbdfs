@@ -17,6 +17,7 @@
 
         dataType: 'text',
         success:function(data){
+          console.log(pos);
          var json = $.parseJSON(data);
          console.log(json);
          $('.result-box').html('');
