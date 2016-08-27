@@ -49,7 +49,7 @@ $sql = "SELECT info.mlb_name, info.mlb_pos, info.throws, info.mlb_team, info.mlb
               FROM player_info info
               LEFT JOIN two_week stat
               ON info.fg_id = stat.playerid
-              WHERE info.mlb_pos=$position";
+              WHERE info.mlb_pos={$position}";
 //Global variables for results
 $results = array();
 $playerName =null;
