@@ -45,7 +45,7 @@ while ($row = row_fetch_assoc($stat_result)){
 }
 */
 
-$all_query = "SELECT info.mlb_name, info.mlb_pos, info.throws, info.mlb_team, info.mlb_team_long, info.fg_name, stat.playerid, stat.G, stat.PA, stat.HR, stat.R, stat.RBI, stat.SB, stat.ISO, stat.BABIP, stat.AVG, stat.wOBA, stat.OBP, stat.SLG, stat.WAR
+$sql = "SELECT info.mlb_name, info.mlb_pos, info.throws, info.mlb_team, info.mlb_team_long, info.fg_name, stat.playerid, stat.G, stat.PA, stat.HR, stat.R, stat.RBI, stat.SB, stat.ISO, stat.BABIP, stat.AVG, stat.wOBA, stat.OBP, stat.SLG, stat.WAR
               FROM player_info info
               LEFT JOIN two_week stat
               ON info.fg_id = stat.playerid
@@ -75,9 +75,9 @@ $statWOBA = null;
 $statWRCPlus = null;
 $statWAR = null;
 
-$all_result = mysqli_query($conn, $all_query);
+$res = mysqli_query($conn, $sql);
 
-while ($row = mysqli_fetch_assoc($mysqli_result)){
+while ($row = mysqli_fetch_assoc($res)){
   $playerName = $row['mlb_name'];
   $playerPos = $row['mlb_pos'];
   $playerThrows = $row['throws'];
