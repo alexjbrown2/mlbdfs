@@ -75,10 +75,10 @@ $statWOBA = null;
 $statWRCPlus = null;
 $statWAR = null;
 
-$all_result = mysqli_query($GLOBALS['DBLink'], $all_query);
+$all_result = mysqli_query($conn, $all_query);
 if(!$all_result) echo 'nope. didnt work';
 
-while ($row = mysqli_fetch_assoc($all_result)){
+while ($row = mysqli_fetch_assoc($mysqli_result)){
   $playerName = $row['mlb_name'];
   $playerPos = $row['mlb_pos'];
   $playerThrows = $row['throws'];
