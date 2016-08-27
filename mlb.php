@@ -8,8 +8,8 @@
   <link rel='stylesheet' href='css/style.css' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
-  $(function(){
-    $(function get_info(pos){
+  
+    function get_info(pos){
       $.ajax({
         method:'POST',
         url:'/mlbdfs/includes/getinfo/infobyposition.php',
@@ -25,10 +25,8 @@
          }
         }
       })
-    })
-  }
+    }
 
-  )
   </script>
 
 </head>
