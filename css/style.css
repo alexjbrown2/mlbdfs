@@ -19,6 +19,7 @@ li a{
 }
 li a:hover{
   color:#ddd;
+  text-decoration:none;
 }
 .result-box{
 display: flex;

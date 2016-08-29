@@ -7,6 +7,7 @@
 
 	require_once("includes/config.php");
 	include("includes/db_functions.php");
+  include("includes/html.php");
 
 
 ?>
